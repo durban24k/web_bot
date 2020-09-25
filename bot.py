@@ -7,7 +7,7 @@ def timeme(method):
           startTime=int(round(time.time()*1000))
           result=method(*args,**kw)
           endTime=int(round(time.time()*1000))
-          print("Execution time:{}s".format((endTime-startTime)/1000))
+          print("Execution time:{}se".format((endTime-startTime)/1000))
           return result
      return wrapper
 
