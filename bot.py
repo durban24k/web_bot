@@ -13,11 +13,12 @@ def timeme(method):
 
 @timeme
 
-def search(x):
-     driver.get(x['producturl'])
-     driver.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input').send_keys(x["name"])
-     driver.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[3]/center/input[1]').click()
+def login(x):
+     driver.get(x['url'])
+     driver.find_element_by_xpath('//*[@id="userName"]').send_keys(x["email"])
+     driver.find_element_by_xpath('//*[@id="password"]').send_keys(x["password"])
+     driver.find_element_by_xpath('//*[@id="btnLogin"]').click()
 
 if __name__ == '__main__':
      driver=webdriver.Chrome('./chromedriver')
-     search(keys)
+     login(keys)
