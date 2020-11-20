@@ -12,7 +12,6 @@ def timeme(method):
      return wrapper
 
 @timeme
-
 def login(x):
      driver.get(x['url'])
      driver.find_element_by_xpath('//*[@id="id_esauth_myaccount_login_link"]').click()
